@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* BaliCraft warm, earthy palette */
+    --background: 39 70% 97%;  /* Warm beige #FDF8F0 */
+    --foreground: 15 28% 29%;  /* Dark brown #5D4037 */
+
+    --card: 39 60% 95%;
+    --card-foreground: 15 28% 29%;
+
+    --popover: 39 70% 97%;
+    --popover-foreground: 15 28% 29%;
+
+    --primary: 22 100% 45%;  /* Terracotta #E65100 */
+    --primary-foreground: 39 70% 97%;
+
+    --secondary: 30 40% 85%;
+    --secondary-foreground: 15 28% 29%;
+
+    --muted: 39 40% 90%;
+    --muted-foreground: 15 20% 50%;
+
+    --accent: 22 100% 45%;  /* Terracotta accent */
+    --accent-foreground: 39 70% 97%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 39 70% 97%;
+
+    --border: 39 40% 85%;
+    --input: 39 40% 90%;
+    --ring: 22 100% 45%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Keep light theme for BaliCraft - warm aesthetic doesn't need dark mode */
+    --background: 39 70% 97%;
+    --foreground: 15 28% 29%;
+
+    --card: 39 60% 95%;
+    --card-foreground: 15 28% 29%;
+
+    --popover: 39 70% 97%;
+    --popover-foreground: 15 28% 29%;
+
+    --primary: 22 100% 45%;
+    --primary-foreground: 39 70% 97%;
+
+    --secondary: 30 40% 85%;
+    --secondary-foreground: 15 28% 29%;
+
+    --muted: 39 40% 90%;
+    --muted-foreground: 15 20% 50%;
+
+    --accent: 22 100% 45%;
+    --accent-foreground: 39 70% 97%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 39 70% 97%;
+
+    --border: 39 40% 85%;
+    --input: 39 40% 90%;
+    --ring: 22 100% 45%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
