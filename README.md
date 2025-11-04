@@ -1,73 +1,62 @@
-# Welcome to your Lovable project
+# BaliCraft - A Curated Digital Gallery
 
-## Project info
+This repository contains the source code for the BaliCraft website, a curated digital gallery for a high-end handicraft store based in Ubud, Bali. The primary business goal of this website is not e-commerce, but to act as a premium digital showcase to drive foot traffic to the physical gallery.
 
-**URL**: https://lovable.dev/projects/d40229e5-274a-463e-b8f8-aead2b75dc8e
+## Business Logic: Drive-to-Store
 
-## How can I edit this code?
+The core business strategy is to bridge the gap between talented local artisans and a premium market. For high-value, authentic handicrafts, customers prefer to see and touch the products before purchasing. This website serves to:
 
-There are several ways of editing your application.
+1.  **Curate & Showcase:** Present a curated selection of the finest handmade goods in a premium, artistic, and authentic digital environment.
+2.  **Tell a Story:** Emphasize the value, story, and authenticity behind each piece and the artisan who created it.
+3.  **Inspire a Visit:** Convince quality-conscious buyers (tourists, collectors, designers) to visit the physical gallery in Ubud, Bali.
 
-**Use Lovable**
+## Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d40229e5-274a-463e-b8f8-aead2b75dc8e) and start prompting.
+*   **Dynamic Content:** All product and artisan data is managed through a Supabase backend, allowing for easy updates without changing the code.
+*   **Category Filtering:** A dedicated collections page where users can view all products or filter by category (Wood, Silver, Textile).
+*   **Featured Products:** A curated section on the main page to highlight specific items.
+*   **Drive-to-Store CTA:** Buttons and sections are strategically designed to encourage users to visit the physical gallery.
+*   **Contact Form with Purpose:** A contact form that captures user intent (e.g., general inquiry vs. scheduling a private visit).
+*   **Embedded Google Maps:** An interactive map showing the gallery's location in Ubud.
 
-Changes made via Lovable will be committed automatically to this repo.
+## Tech Stack
 
-**Use your preferred IDE**
+*   **Frontend:** React, Vite, TypeScript
+*   **Styling:** Tailwind CSS with shadcn/ui components
+*   **Backend:** Supabase (PostgreSQL Database, Storage, and APIs)
+*   **Routing:** React Router DOM
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Local Setup
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+To run this project locally, follow these steps:
 
-Follow these steps:
+1.  **Clone the repository:**
+    ```sh
+    git clone https://github.com/dimasherdian/Handicraft_Store.git
+    cd Handicraft_Store
+    ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2.  **Install dependencies:**
+    ```sh
+    npm install
+    ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3.  **Set up Supabase environment variables:**
+    *   Create a new file named `.env.local` in the root of the project.
+    *   Add your Supabase Project URL and Anon Key to this file. You can find these in your Supabase project dashboard under **Settings > API**.
+    ```
+    VITE_SUPABASE_URL="YOUR_SUPABASE_PROJECT_URL"
+    VITE_SUPABASE_ANON_KEY="YOUR_SUPABASE_ANON_KEY"
+    ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+4.  **Set up the Supabase database:**
+    *   Log in to your Supabase dashboard.
+    *   Go to the **SQL Editor**.
+    *   Run the SQL scripts provided in the project to create and populate the necessary tables (`artisans`, `products`, `messages`).
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+5.  **Run the development server:**
+    ```sh
+    npm run dev
+    ```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/d40229e5-274a-463e-b8f8-aead2b75dc8e) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+The application should now be running on `http://localhost:5173` (or another port if 5173 is in use).
